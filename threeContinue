@@ -18,6 +18,7 @@ public class Solution{
                 if(nums[index] + 1 == nums[index + 1]){
                     ans.add(new int[]{nums[i] , nums[index],nums[index + 1]});
                 }
+                i = index - 1;
             }
         }
         return ans;
