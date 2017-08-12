@@ -1,10 +1,13 @@
 public class Solution {
     public int[] findDiagonalOrder(int[][] matrix) {
-        int row = 0;
-        int col = 0;
+        if(matrix.length == 0 || matrix[0].length == 0){
+            return new int[0];
+        }
         int m = matrix.length;
         int n = matrix[0].length;
         int[] ans = new int[m * n];
+        int row = 0;
+        int col = 0;
         int[][] dirs = {{-1, 1}, {1, -1}};
         int d = 0;
         for (int i = 0; i < m * n; i++) {
