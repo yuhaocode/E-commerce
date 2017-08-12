@@ -6,9 +6,9 @@ public class Solution {
         int n = matrix[0].length;
         int[] ans = new int[m * n];
         int[][] dirs = {{-1, 1}, {1, -1}};
-        
+        int d = 0;
         for (int i = 0; i < m * n; i++) {
-            result[i] = matrix[row][col];
+            ans[i] = matrix[row][col];
             row += dirs[d][0];
             col += dirs[d][1];
             //in the right part
@@ -18,9 +18,7 @@ public class Solution {
             if (row < 0)  { row = 0; d = 1 - d;}
             if (col < 0)  { col = 0; d = 1 - d;}
         }
-        
         return ans;
-        
     }
 }
 /*
