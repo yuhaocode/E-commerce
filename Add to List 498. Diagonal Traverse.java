@@ -19,7 +19,7 @@ public class Solution {
             if (col < 0)  { col = 0; d = 1 - d;}
         }
         
-        return result;
+        return ans;
         
     }
 }
